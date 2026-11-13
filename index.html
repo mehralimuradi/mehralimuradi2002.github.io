@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mehr Ali Muradi — Portfolio</title>
+<meta name="description" content="Mehr Ali Muradi — Computer Science student in Kabul. Office, Photoshop, databases, networking and document specialist. Portfolio and CV.">
+<meta property="og:title" content="Mehr Ali Muradi — Portfolio">
+<meta property="og:description" content="Computer Science student, document specialist and technical staff based in Kabul.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- Menu bar -->
+  <header class="menubar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Muradi<b>.cut</b></span></div>
+    <nav class="menu" aria-label="Sections">
+      <button data-jump="profile">Profile</button>
+      <button data-jump="experience">Experience</button>
+      <button data-jump="education">Education</button>
+      <button data-jump="skills">Skills</button>
+      <button data-jump="trainings">Trainings</button>
+      <button data-jump="contact">Contact</button>
+    </nav>
+    <div class="menubar-right">
+      <span class="rec"><i></i>LIVE</span>
+      <span class="mono dim" id="projName">portfolio_v1.prproj</span>
+      <a class="export-btn" href="mailto:mehralimuradi79@gmail.com">Hire me</a>
+    </div>
+  </header>
+
+  <!-- Media pool -->
+  <section class="panel pool" aria-label="Media pool">
+    <div class="panel-head"><span>MEDIA POOL</span><span class="dim mono" id="poolCount">8 bins</span></div>
+    <div class="pool-grid" id="poolGrid"></div>
+    <div class="panel-head sub"><span>EFFECTS · FX</span></div>
+    <div class="fx-list">
+      <button class="fx" data-fx="none">Clean</button>
+      <button class="fx" data-fx="glow">Glow</button>
+      <button class="fx" data-fx="vhs">VHS</button>
+      <button class="fx" data-fx="mono">B&amp;W LUT</button>
+    </div>
+    <div class="panel-head sub"><span>AGENT ACTIVITY</span><span class="mono dim"><i class="live-dot"></i>3 online</span></div>
+    <ul class="log mono" id="log" aria-live="off"></ul>
+  </section>
+
+  <!-- Program monitor -->
+  <section class="panel monitor-panel" aria-label="Program monitor">
+    <div class="panel-head"><span>PROGRAM · <b id="monTitle">PROFILE</b></span><span class="mono dim" id="monTc">00:00:00:00</span></div>
+    <div class="monitor-wrap">
+      <div class="monitor" id="monitor">
+        <div class="safe" aria-hidden="true"></div>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="mon-corner tl mono" id="monTag">CLIP 01</div>
+        <div class="mon-corner tr mono"><i class="dot"></i>1080 × 1920 · 30fps</div>
+        <div class="mon-content" id="monContent"></div>
+        <div class="mon-corner bl mono" id="monMeta">Kabul, AF</div>
+        <div class="mon-corner br mono" id="monTc2">00:00:00:00</div>
+      </div>
+    </div>
+    <div class="transport">
+      <button class="t-btn" id="prevBtn" aria-label="Previous clip">⏮</button>
+      <button class="t-btn play" id="playBtn" aria-label="Play timeline">▶</button>
+      <button class="t-btn" id="nextBtn" aria-label="Next clip">⏭</button>
+      <span class="mono dim t-hint">Space = play · ← → = clips</span>
+    </div>
+  </section>
+
+  <!-- Scopes + inspector -->
+  <aside class="panel inspector" aria-label="Inspector">
+    <div class="panel-head"><span>SCOPES</span><span class="mono dim">waveform</span></div>
+    <canvas id="scope" class="scope" height="90"></canvas>
+    <div class="panel-head sub"><span>COLOR · drag a wheel</span></div>
+    <div class="wheels" id="wheels">
+      <div class="wheel" data-w="0"><div class="wheel-dot"></div><span>LIFT</span></div>
+      <div class="wheel" data-w="1"><div class="wheel-dot"></div><span>GAMMA</span></div>
+      <div class="wheel" data-w="2"><div class="wheel-dot"></div><span>GAIN</span></div>
+    </div>
+    <div class="panel-head sub"><span>INSPECTOR</span><span class="mono dim" id="insType">—</span></div>
+    <dl class="props" id="props"></dl>
+  </aside>
+
+  <!-- Timeline -->
+  <section class="panel timeline" aria-label="Timeline">
+    <div class="panel-head">
+      <span>TIMELINE · <span class="mono">career_edit</span></span>
+      <span class="mono dim"><span id="tlTc">00:00:00:00</span> · 2019 → 2026</span>
+    </div>
+    <div class="tl-scroll">
+      <div class="tl-inner" id="tlInner">
+        <div class="ruler" id="ruler"></div>
+        <div class="tracks" id="tracks"></div>
+        <div class="playhead" id="playhead"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="statusbar mono">
+    <span>● READY</span>
+    <span>Mehr Ali Muradi · Computer Science student</span>
+    <span class="hide-sm">Dari · Pashto · English</span>
+    <span class="hide-sm">© 2026</span>
+  </footer>
+</div>
+<div id="cursors" aria-hidden="true"></div>
+<script src="app.js"></script>
+<script src="agents.js"></script>
+</body>
+</html>
